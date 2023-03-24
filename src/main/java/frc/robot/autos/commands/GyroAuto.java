@@ -19,7 +19,7 @@ public class GyroAuto extends CommandBase{
 
     @Override
     public void execute() {
-        if(gyro.getPitch()>10){
+        if(gyro.getPitch()>5){
             while(gyro.getPitch()>5){
                 m_speed = 0.35;
                 motor.mSwerveMods[0].mDriveMotor.set(ControlMode.PercentOutput, m_speed);
@@ -28,7 +28,7 @@ public class GyroAuto extends CommandBase{
                 motor.mSwerveMods[3].mDriveMotor.set(ControlMode.PercentOutput, m_speed);
             }
         }
-        if(gyro.getPitch()<-10){
+        if(gyro.getPitch()<-5){
             while(gyro.getPitch()<-5){
                 m_speed = -0.35;
                 motor.mSwerveMods[0].mDriveMotor.set(ControlMode.PercentOutput, m_speed);
