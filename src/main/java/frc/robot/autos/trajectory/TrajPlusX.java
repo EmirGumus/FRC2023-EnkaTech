@@ -28,7 +28,7 @@ public class TrajPlusX extends SequentialCommandGroup {
     Trajectory trajectory = TrajectoryGenerator.generateTrajectory(
       List.of(
         new Pose2d(0,0,new Rotation2d(0)),
-        new Pose2d(4.7,-0.3,new Rotation2d(0))
+        new Pose2d(1.5,0,new Rotation2d(0))
       ), trajectoryConfig);
 
         // 3. Define PID controllers for tracking trajectory
