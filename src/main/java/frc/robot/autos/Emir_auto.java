@@ -23,15 +23,17 @@ public class CUBE_auto extends SequentialCommandGroup {
   /** Creates a new CUBE. */
   public CUBE_auto(RotationSub m_RotationSub, SliderSub m_SliderSub, ElevatorSub m_Elevator,IntakeSub m_IntakeSub, Swerve m_Swerve) {
     super(
-      new IntakeBreake(-0.5, m_IntakeSub).withTimeout(0.1)
-      .andThen(new RotationCubeAuto(m_RotationSub).withTimeout(0.7)
-      .andThen(new intakethrow3(0.5,m_IntakeSub).withTimeout(0.3))
-      .andThen(new TrajMinusX(m_Swerve)).withTimeout(5)
-      .andThen(new
-TrajPlusY(m_Swerve)).withTimeout(8)
-      .andThen(new TrajPlusX(m_Swerve)).withTimeout(0.5)
-      .andThen(new GyroAuto(m_Swerve)).withTimeout(0.1)
-      )
+            //new IntakeBreake(-0.5, m_IntakeSub).withTimeout(0.1)
+      //.andThen(new RotationCubeAuto(m_RotationSub).withTimeout(0.7)
+      //.andThen(new intakethrow3(0.5,m_IntakeSub).withTimeout(0.3))
+
+      //new TrajMinusX(m_Swerve).withTimeout(2.7)   
+      //.andThen(new TrajPlusY(m_Swerve)).withTimeout(4.449)
+      //.andThen(
+      new TrajPlusX(m_Swerve)
+      //)
+      .withTimeout(1)
+      .andThen(new GyroAuto(m_Swerve))
     );
   }
 }
