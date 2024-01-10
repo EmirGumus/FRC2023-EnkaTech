@@ -12,6 +12,7 @@ public class ElevatorDown extends CommandBase {
 
   public ElevatorDown(ElevatorSub _ElevatorSub) {
     this.m_elevatorSub = _ElevatorSub;
+    this.e_encoder = _ElevatorSub.e_encoder.getPosition();
     addRequirements(m_elevatorSub);
   }
 
@@ -20,15 +21,17 @@ public class ElevatorDown extends CommandBase {
 
   @Override
   public void execute() {
-    e_encoder = m_elevatorSub.e_encoder.getPosition();
-
-    m_speed = (6-e_encoder)* Constants.torso.elevatorKP;
-    m_elevatorSub.runElevator(m_speed);
-
-    if(m_elevatorSub.e_switch.get()){
+    if(e_encoder >=0){
       m_elevatorSub.stopElevator();
     }
-   
+
+    //if(m_elevatorSub.e_switch.get()){
+    //  m_elevatorSub.stopElevator();
+    //}
+
+    e_encoder = m_elevatorSub.e_encoder.getPosition();
+    m_speed = (0-e_encoder)* Constants.torso.elevatorKP;
+    m_elevatorSub.runElevator(m_speed);
   }
 
   @Override

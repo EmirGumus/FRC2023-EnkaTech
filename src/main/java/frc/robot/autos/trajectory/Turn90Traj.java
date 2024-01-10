@@ -28,7 +28,7 @@ public class Turn90Traj extends SequentialCommandGroup {
     Trajectory trajectory = TrajectoryGenerator.generateTrajectory(
       List.of(
         new Pose2d(0,0,new Rotation2d(0)),
-        new Pose2d(1,0,new Rotation2d(2)) // 4->180derece (Süre veya x arttırılmalı)
+        new Pose2d(1,-1,new Rotation2d(4)) // 4->180derece (Süre veya x arttırılmalı)
       ), trajectoryConfig);
 
         // 3. Define PID controllers for tracking trajectory

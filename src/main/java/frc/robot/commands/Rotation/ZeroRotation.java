@@ -9,7 +9,7 @@ public class ZeroRotation extends CommandBase {
   private final RotationSub m_RotationSub;
   private double m_speed;
   private double r_encoder;
-  double error = 15;
+  double error = 30;
 
   public ZeroRotation(RotationSub _RotationSub) {
     this.m_RotationSub = _RotationSub;
@@ -21,6 +21,7 @@ public class ZeroRotation extends CommandBase {
 
   @Override
   public void execute() {
+
     r_encoder = m_RotationSub.m_encoder.getPosition();
 
     m_speed = (error-r_encoder)* Constants.torso.gripperKP;

@@ -18,7 +18,7 @@ public class HangarUp extends SequentialCommandGroup {
   /** Creates a new CUBE. */
   public HangarUp(ElevatorSub m_ElevatorSub,RotationSub m_RotationSub) {
     super(
-      new ElevatorUp(m_ElevatorSub).withTimeout(3).alongWith(new HangarUpRotation(m_RotationSub).withTimeout(2))
+      new ElevatorUp(m_ElevatorSub).withTimeout(2).alongWith(new HangarUpRotation(m_RotationSub).withTimeout(2))
       //new SliderForward(m_SliderSub).withTimeout(3)
 
 

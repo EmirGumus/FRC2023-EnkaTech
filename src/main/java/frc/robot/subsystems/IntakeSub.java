@@ -27,6 +27,7 @@ public class IntakeSub extends SubsystemBase {
     intakeRNeo.set(0);
     intakeLNeo.set(0);
   }
+  
   public void breakeintake(){
     intakeRNeo.set(-0.1);
     intakeLNeo.set(-0.1);

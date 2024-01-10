@@ -19,7 +19,7 @@ public class Zero extends SequentialCommandGroup {
   /** Creates a new CUBE. */
   public Zero(RotationSub m_RotationSub,SliderSub m_SliderSub,ElevatorSub m_ElevatorSub) {
     super(
-      new ElevatorDown(m_ElevatorSub).withTimeout(4).alongWith(new SliderBackward(m_SliderSub).withTimeout(2).alongWith(new ZeroRotation(m_RotationSub).withTimeout(2)))
+      new ElevatorDown(m_ElevatorSub).withTimeout(1.8).alongWith(new SliderBackward(m_SliderSub).withTimeout(1.5).alongWith(new ZeroRotation(m_RotationSub).withTimeout(1.7)))
       //new SliderForward(m_SliderSub).withTimeout(3)
 
 

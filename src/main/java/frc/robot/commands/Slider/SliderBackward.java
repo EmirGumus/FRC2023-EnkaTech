@@ -20,14 +20,16 @@ public class SliderBackward extends CommandBase {
 
   @Override
   public void execute() {
+
+    if(!m_slider.s_switch.get()){
+      m_slider.stopSlider();
+    }
     s_encoder = m_slider.s_encoder.getPosition();
 
     m_speed = (6-s_encoder)* Constants.torso.sliderKP;
     m_slider.runSlider(m_speed);
 
-    if(!m_slider.s_switch.get()){
-      m_slider.stopSlider();
-    }
+   
  
   }
   

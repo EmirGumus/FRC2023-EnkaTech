@@ -19,7 +19,7 @@ public class TrajMinusX extends SequentialCommandGroup {
   /** Creates a new EmirAuto. 
    * @return */
   public TrajMinusX(Swerve SwerveSub) {
-   TrajectoryConfig trajectoryConfig = new TrajectoryConfig(
+    TrajectoryConfig trajectoryConfig = new TrajectoryConfig(
       3,
       AutoConstants.kMaxAccelerationMetersPerSecondSquared)
       .setKinematics(Constants.Swerve.swerveKinematics);
@@ -28,7 +28,7 @@ public class TrajMinusX extends SequentialCommandGroup {
     Trajectory trajectory = TrajectoryGenerator.generateTrajectory(
       List.of(
         new Pose2d(0,0,new Rotation2d(0)),
-        new Pose2d(-4.3,-0.23,new Rotation2d(0))
+        new Pose2d(-4.3,-0.1,new Rotation2d(0))
       ), trajectoryConfig);
 
         // 3. Define PID controllers for tracking trajectory
@@ -57,4 +57,3 @@ public class TrajMinusX extends SequentialCommandGroup {
     );
   }
 }
-

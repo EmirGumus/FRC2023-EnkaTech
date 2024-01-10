@@ -9,7 +9,7 @@ public class Level2RotationUp extends CommandBase {
   private final RotationSub m_RotationSub;
   private double m_speed;
   private double r_encoder;
-  double error = -15;
+  double error = -25;
 
   public Level2RotationUp(RotationSub _RotationSub) {
     this.m_RotationSub = _RotationSub;

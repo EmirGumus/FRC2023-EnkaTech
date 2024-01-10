@@ -34,7 +34,7 @@ public class ElevatorHalfUpHangar extends CommandBase {
 
   @Override
   public void end(boolean interrupted) {
-    m_elevatorSub.stopElevator();
+    m_elevatorSub.stopElevatorUP();
   }
 
   @Override

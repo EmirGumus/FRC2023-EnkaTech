@@ -19,7 +19,7 @@ public class Level3Group extends SequentialCommandGroup {
   /** Creates a new CUBE. */
   public Level3Group(RotationSub m_RotationSub,SliderSub m_SliderSub,ElevatorSub m_ElevatorSub) {
     super(
-      new ElevatorUp(m_ElevatorSub).withTimeout(4).alongWith(new SliderForward(m_SliderSub).withTimeout(2).andThen(new Level3RotationUp(m_RotationSub).withTimeout(2)))
+      new ElevatorUp(m_ElevatorSub).withTimeout(1.7).alongWith(new SliderForward(m_SliderSub).withTimeout(1).alongWith(new Level3RotationUp(m_RotationSub).withTimeout(1.5)))
       //new SliderForward(m_SliderSub).withTimeout(3)
 
 

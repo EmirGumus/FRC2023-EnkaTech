@@ -18,7 +18,7 @@ public class Level2Group extends SequentialCommandGroup {
   /** Creates a new CUBE. */
   public Level2Group(RotationSub m_RotationSub,ElevatorSub m_ElevatorSub) {
     super(
-      new ElevatorHalfUp(m_ElevatorSub).withTimeout(2).alongWith(new Level2RotationUp(m_RotationSub).withTimeout(2))
+      new ElevatorHalfUp(m_ElevatorSub).withTimeout(1.5).alongWith(new Level2RotationUp(m_RotationSub).withTimeout(2))
       //new SliderForward(m_SliderSub).withTimeout(3)
 
 

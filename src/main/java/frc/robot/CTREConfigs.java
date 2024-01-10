@@ -23,7 +23,8 @@ public final class CTREConfigs {
             Constants.Swerve.angleEnableCurrentLimit, 
             Constants.Swerve.angleContinuousCurrentLimit, 
             Constants.Swerve.anglePeakCurrentLimit, 
-            Constants.Swerve.anglePeakCurrentDuration);
+            Constants.Swerve.anglePeakCurrentDuration
+        );
 
         swerveAngleFXConfig.slot0.kP = Constants.Swerve.angleKP;
         swerveAngleFXConfig.slot0.kI = Constants.Swerve.angleKI;
@@ -36,7 +37,8 @@ public final class CTREConfigs {
             Constants.Swerve.driveEnableCurrentLimit, 
             Constants.Swerve.driveContinuousCurrentLimit, 
             Constants.Swerve.drivePeakCurrentLimit, 
-            Constants.Swerve.drivePeakCurrentDuration);
+            Constants.Swerve.drivePeakCurrentDuration
+        );
 
         swerveDriveFXConfig.slot0.kP = Constants.Swerve.driveKP;
         swerveDriveFXConfig.slot0.kI = Constants.Swerve.driveKI;

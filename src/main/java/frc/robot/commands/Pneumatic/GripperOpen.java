@@ -22,7 +22,6 @@ public class GripperOpen extends CommandBase {
 
   @Override
   public void end(boolean interrupted) {
-    m_Pneumatic.stopCyclinders();
   }
 
   @Override
